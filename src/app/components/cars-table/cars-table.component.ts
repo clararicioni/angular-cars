@@ -7,6 +7,7 @@ import { Car } from '../../car';
   templateUrl: './cars-table.component.html',
   styleUrl: './cars-table.component.css'
 })
+
 export class CarsTableComponent {
   car: Car = {} as Car;
   idCount: number = 4;
@@ -34,6 +35,7 @@ export class CarsTableComponent {
       year: 2012
     }
   ];
+
   saveCar() {
     if (!this.isUpdate) {
       this.car.id = this.idCount;
@@ -43,8 +45,13 @@ export class CarsTableComponent {
     this.car = {} as Car;
     this.isUpdate = false;
   }
+
   update(selectedCar: Car) {
     this.car = selectedCar;
     this.isUpdate = true;
+  }
+
+  remove(removeCar: Car) {
+    this.cars = this.cars.filter(c => c !== removeCar);
   }
 }

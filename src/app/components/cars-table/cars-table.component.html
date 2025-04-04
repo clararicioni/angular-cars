@@ -1,5 +1,5 @@
 <app-car [carFilho]="car" (saveEmitter)="saveCar()"></app-car>
-<div class="container text-center p-4 bg-body-tertiary">
+<div class="container text-center p-4 rounded-bottom-4 bg-body-tertiary">
     <h3 class="mt-2">Carros Cadastrados</h3>
     <table class="table mt-4">
         <thead>
@@ -21,6 +21,7 @@
                 <td>{{car.year}}</td>
                 <td class="text-end">
                     <button class="btn btn-success me-2" (click)="update(car)">Alterar</button>
+                    <button class="btn btn-danger" (click)="remove(car)">Remover</button>
                 </td>
             </tr>
         </tbody>

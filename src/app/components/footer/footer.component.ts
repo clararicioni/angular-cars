@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
+
 export class FooterComponent {
   footerTitle = "Versão 1.0"
 }
