@@ -17,7 +17,7 @@ npm i
 To run this project:
 
 ```bash
-ng build
+ng serve --open
 ```
 
 
