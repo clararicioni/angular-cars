@@ -6,7 +6,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ## Installing dependencies
 
-to install all dependencies:
+To install all dependencies:
 
 ```bash
 npm i
