@@ -1,1 +1,34 @@
-<p>form works!</p>
+<div class="container p-2">
+    <h2 class="text-center mt-2">Cadastro de Carros</h2>
+    <form>
+        <div class="row mt-2">
+            <label for="title" class="form-label">Nome:</label>
+            <div>
+                <input type="text" class="form-control" name="title" id="title" required>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <label for="automaker" class="form-label">Montadora:</label>
+            <div>
+                <input type="text" class="form-control" name="automaker" id="automaker" required>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-6">
+                <label for="price" class="form-label">Preço:</label>
+                <input type="number" class="form-control" name="price" id="price" required>
+            </div>
+            <div class="col-md-6">
+                <label for="year" class="form-label">Ano:</label>
+                <input type="number" class="form-control" name="year" id="year" required>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button class="btn btn-primary mt-3">Salvar</button>
+        </div>
+
+    </form>
+</div>
