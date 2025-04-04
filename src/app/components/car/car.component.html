@@ -1,33 +1,35 @@
 <div class="container p-4 bg-body-tertiary">
     <h2 class="text-center mt-2">Cadastro de Carros</h2>
-    <form>
+    <form #formBook="ngForm">
         <div class="row mt-2">
             <label for="name" class="form-label">Nome:</label>
             <div>
-                <input type="text" class="form-control" name="name" id="name" required>
+                <input type="text" class="form-control" [(ngModel)]="carFilho.name" name="name" id="name" required>
             </div>
         </div>
 
         <div class="row mt-2">
             <label for="automaker" class="form-label">Montadora:</label>
             <div>
-                <input type="text" class="form-control" name="automaker" id="automaker" required>
+                <input type="text" class="form-control" [(ngModel)]="carFilho.automaker" name="automaker" id="automaker"
+                    required>
             </div>
         </div>
 
         <div class="row mt-2">
             <div class="col-md-6">
                 <label for="price" class="form-label">Preço:</label>
-                <input type="number" class="form-control" name="price" id="price" required>
+                <input type="number" class="form-control" [(ngModel)]="carFilho.price" name="price" id="price" required>
             </div>
             <div class="col-md-6">
                 <label for="year" class="form-label">Ano:</label>
-                <input type="number" class="form-control" name="year" id="year" required>
+                <input type="number" class="form-control" name="year" [(ngModel)]="carFilho.year" id="year" required>
             </div>
         </div>
 
         <div class="text-center">
-            <button class="btn btn-primary mt-3 px-4 py-2">Salvar</button>
+            <button class="btn btn-primary mt-3 px-4 py-2" (click)="save()"
+                [disabled]="formBook.invalid">Salvar</button>
         </div>
 
     </form>
