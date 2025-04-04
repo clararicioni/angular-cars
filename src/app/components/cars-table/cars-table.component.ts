@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Car } from '../../car';
 
 @Component({
   selector: 'app-cars-table',
@@ -7,5 +8,27 @@ import { Component } from '@angular/core';
   styleUrl: './cars-table.component.css'
 })
 export class CarsTableComponent {
-
+  cars: Car[] = [
+  {
+    id: 1,
+    name : "Uno",
+    automaker : "Fiat",
+    price : 10000,
+    year : 2000
+  },
+  {
+    id: 2,
+    name : "Corsa",
+    automaker : "Chevrolet",
+    price : 20000,
+    year : 2008
+  },
+  {
+    id: 3,
+    name : "Polo",
+    automaker : "Volkswagen",
+    price : 38000,
+    year : 2012
+  }
+];
 }

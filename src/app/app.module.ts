@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarsTableComponent } from './components/cars-table/cars-table.component';
-import { FormComponent } from './components/cars-form/form.component';
+import { CarComponent } from './components/car/car.component';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { FormComponent } from './components/cars-form/form.component';
     HeaderComponent,
     FooterComponent,
     CarsTableComponent,
-    FormComponent
+    CarComponent
   ],
   imports: [
     BrowserModule
