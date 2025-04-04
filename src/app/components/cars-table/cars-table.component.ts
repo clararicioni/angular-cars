@@ -10,6 +10,7 @@ import { Car } from '../../car';
 export class CarsTableComponent {
   car: Car = {} as Car;
   idCount: number = 4;
+  isUpdate: boolean = false;
   cars: Car[] = [
     {
       id: 1,
@@ -34,9 +35,16 @@ export class CarsTableComponent {
     }
   ];
   saveCar() {
-    this.car.id = this.idCount;
-    this.idCount++;
-    this.cars.push(this.car);
+    if (!this.isUpdate) {
+      this.car.id = this.idCount;
+      this.idCount++;
+      this.cars.push(this.car);
+    }
     this.car = {} as Car;
+    this.isUpdate = false;
+  }
+  update(selectedCar: Car) {
+    this.car = selectedCar;
+    this.isUpdate = true;
   }
 }
