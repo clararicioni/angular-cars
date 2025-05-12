@@ -4,8 +4,7 @@ import { Car } from '../../car';
 @Component({
   selector: 'app-cars-table',
   standalone: false,
-  templateUrl: './cars-table.component.html',
-  styleUrl: './cars-table.component.css'
+  templateUrl: './cars-table.component.html'
 })
 
 export class CarsTableComponent {
@@ -53,5 +52,10 @@ export class CarsTableComponent {
 
   remove(removeCar: Car) {
     this.cars = this.cars.filter(c => c !== removeCar);
+
+    if (this.car.id === removeCar.id) {
+      this.car = {} as Car;
+      this.isUpdate = false;
+    }
   }
 }
